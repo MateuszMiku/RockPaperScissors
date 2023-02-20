@@ -7,23 +7,27 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
     if (playerSelection == computerSelection) {
         return "The game ended as a draw"
-    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
         return "You lose, paper beats rock"
-    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         return "You win, rock beats scissors"
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         return "You win, paper beats rock"
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         return "You lose, scissors beat paper"
-    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         return "You lose, rock beats scissors"
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         return "You win, scissors beat paper"
     } 
 }
 
-const playerSelection = 'rock';
+const playerSelection = 'rOck';
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
+
+
+function game()
